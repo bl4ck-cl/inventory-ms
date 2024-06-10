@@ -7,6 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ProvidersModule } from './providers/providers.module';
 import { UsersProfilesModule } from './users-profiles/users-profiles.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [UsersModule, AuthModule, ConfigModule.forRoot({
@@ -14,7 +15,8 @@ import { UsersProfilesModule } from './users-profiles/users-profiles.module';
   }),
     MongooseModule.forRoot('mongodb://localhost/inventory'),
     ProvidersModule,
-    UsersProfilesModule,],
+    UsersProfilesModule,
+    ProductsModule,],
   controllers: [AppController],
   providers: [AppService],
 })

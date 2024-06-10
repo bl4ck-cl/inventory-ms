@@ -4,6 +4,10 @@ import { Date } from "mongoose";
 export class CreateUsersProfileDto {
     @IsOptional()
     @IsString()
+    readonly userId: string;
+
+    @IsOptional()
+    @IsString()
     readonly name: string;
     
     @IsOptional()
